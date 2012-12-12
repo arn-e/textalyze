@@ -1,0 +1,18 @@
+## TextAlyze.com
+## Text Analysis On The Fly
+
+### Usage :
+
+* User submits text document via upload link or URL
+* Analysis performed on a number of dimensions :
+  * Word Relevance Score (TF-IDF)
+  * N-Grams (2-grams)
+  * Sentiment (emotion category lookup)
+  * Optional : Trained Sentiment Analysis via Saplo
+
+### To Do :
+
+1. Add unit tests for document & document upload
+2. Build prototype UI
+3. Add Integration coverage
+4. TBD
