@@ -17,16 +17,12 @@ class Document < ActiveRecord::Base
     doc.text
   end
   
-  def self.new_document(author, title, body, submitted_by, url)
+  def self.new_document(body)
     new_doc = Document.new
-    new_doc.author = author
-    new_doc.title = title
     new_doc.body = body
-    new_doc.submitted_by = submitted_by
-    new_doc.url = url
     new_doc.word_count = TextProcessor.word_count(body)
-    new_doc.word_frequency = TextProcessor.word_frequency(body)
-    new_doc.save
+    new_doc.word_frequency = TextProcessor.word_frequency(body).to_json
+    new_doc.save!
   end
 
   def document_analysis

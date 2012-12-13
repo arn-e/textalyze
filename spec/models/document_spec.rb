@@ -26,7 +26,7 @@ describe Document do
     before(:each) { @base_count = Document.count }
 
     it 'creates a new document' do
-      Document.new_document("mock_author", "mock_title", "mock_body", "mock_submit", "mock_url")
+      Document.new_document("mock_body")
       Document.count.should eql(@base_count + 1)
     end
   end  

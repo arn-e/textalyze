@@ -4,7 +4,7 @@ class DocumentsController < ApplicationController
   end
 
   def create
-    Document.new_document("","",params[:body],"","")
+    Document.new_document(params[:body])
     @document = Document.last
   end
 
