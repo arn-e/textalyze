@@ -3,9 +3,13 @@ require 'spec_helper'
 describe Document do 
   context 'document provided via URL' do
 
-    it 'returns an error when an invalid URL is passed'
+    let(:fake_url) {"http://"}
+    it 'returns an error when an invalid URL is passed' do
+      Document.new_http_request("http://somefakeshit").should eql("Invalid URL")
+    end
 
-    it 'fires off an HTTP request when a valid URL is passed'
+    it 'fires off an HTTP request when a valid URL is passed' do
+    end
 
     it 'pulls in the body of an HTTP request'
 

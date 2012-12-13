@@ -1,22 +1,26 @@
 module WebHandler
 
+  def self.url_validity_check(url)
+    query_api(url, 'head')
+  end
+
   def self.data_from_url(url)
     query_api(url)
   end
 
-  def self.set_connection_parameters(url, port = 80)
+  def self.set_connection_parameters(url, request_type, port = 80)
     uri = URI.parse(url)
     http = Net::HTTP.new(uri.host, port)
     if port == 443
         http.use_ssl = true
         http.verify_mode = OpenSSL::SSL::VERIFY_NONE
     end
-    request = Net::HTTP::Get.new(uri.request_uri, initheader = {"Authorization" => "token #{OAUTH_TOKEN}"})
+    request = Net::HTTP::Get.new(uri.request_uri))
     [request, http]
   end
 
-  def self.query_api(url)
-    request, http = self.set_connection_parameters(url, 443)
+  def self.query_api(url, request_type = 'get', port = 80, )
+    request, http = self.set_connection_parameters(url, port)
     response = http.request(request)
     json_body = JSON.parse(response.body)
   end
