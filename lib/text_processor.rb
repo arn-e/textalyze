@@ -4,8 +4,8 @@ module TextProcessor
     body.split.length
   end
 
-  def self.word_frequency(body)
-    
+  def self.word_frequency(body, container = [])
+    TfIdf.new(container.push(body.split)).tf
   end
 
 end
