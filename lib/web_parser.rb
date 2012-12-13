@@ -1,15 +1,20 @@
 # Note : JSON is no longer being parsed in the query method
-
+require 'uri'
+require 'net/http'
+require 'net/https'
 
 module WebHandler
   def self.url_validity_check(url)
     response = query_api(url, 'head')
+    # logger.info(response)
+    # logger.info(response.header)
+    p response
+    p response.header
     response.header.message == "OK" ? true : false
   end
 
   def self.data_from_url(url)
     response = query_api(url, 'get')
-    # remember, the JSON is not being parsed in the query method anymore
   end
 
   def self.set_connection_parameters(url, request_type, port = 80)

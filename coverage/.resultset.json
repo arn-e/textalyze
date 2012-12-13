@@ -206,6 +206,52 @@
       ],
       "/Users/arne/code/projects/text_analysis/textalyze/app/models/document.rb": [
         1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/arne/code/projects/text_analysis/textalyze/lib/web_parser.rb": [
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
         1,
         null,
         null
@@ -274,6 +320,6 @@
         null
       ]
     },
-    "timestamp": 1355363834
+    "timestamp": 1355374439
   }
 }
