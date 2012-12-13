@@ -1,4 +1,5 @@
 require './lib/web_parser.rb'
+require './lib/text_processor.rb'
 
 class Document < ActiveRecord::Base
   include WebHandler
@@ -23,6 +24,10 @@ class Document < ActiveRecord::Base
     new_doc.submitted_by = submitted_by
     new_doc.url = url
     new_doc.save
+  end
+
+  def document_analysis
+
   end
 
 end
