@@ -6,10 +6,6 @@ require 'net/https'
 module WebHandler
   def self.url_validity_check(url)
     response = query_api(url, 'head')
-    # logger.info(response)
-    # logger.info(response.header)
-    p response
-    p response.header
     response.header.message == "OK" ? true : false
   end
 
