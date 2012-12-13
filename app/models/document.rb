@@ -11,6 +11,18 @@ class Document < ActiveRecord::Base
   end
 
   def self.parse_http_body(body)
+    doc = Nokogiri::HTML(body)
+    doc.text
+  end
+
+  def self.new_document(author, title, body, submitted_by, url)
+    new_doc = Document.new
+    new_doc.author = author
+    new_doc.title = title
+    new_doc.body = body
+    new_doc.submitted_by = submitted_by
+    new_doc.url = url
+    new_doc.save
   end
 
 end
