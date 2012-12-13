@@ -1,11 +1,15 @@
-module WebHandler
+# Note : JSON is no longer being parsed in the query method
 
+
+module WebHandler
   def self.url_validity_check(url)
-    query_api(url, 'head')
+    response = query_api(url, 'head')
+    response.header.message == "OK" ? true : false
   end
 
   def self.data_from_url(url)
-    query_api(url)
+    response = query_api(url, 'get')
+    # remember, the JSON is not being parsed in the query method anymore
   end
 
   def self.set_connection_parameters(url, request_type, port = 80)
@@ -15,14 +19,12 @@ module WebHandler
         http.use_ssl = true
         http.verify_mode = OpenSSL::SSL::VERIFY_NONE
     end
-    request = Net::HTTP::Get.new(uri.request_uri))
+    request_type == 'get' ? (request = Net::HTTP::Get.new(uri.request_uri)) : (request = Net::HTTP::Head.new(uri.request_uri))
     [request, http]
   end
 
-  def self.query_api(url, request_type = 'get', port = 80, )
-    request, http = self.set_connection_parameters(url, port)
+  def self.query_api(url, request_type = 'get', port = 80)
+    request, http = self.set_connection_parameters(url, request_type, port)
     response = http.request(request)
-    json_body = JSON.parse(response.body)
   end
-
 end
