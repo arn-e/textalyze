@@ -7,6 +7,10 @@ class Document < ActiveRecord::Base
   
   def self.new_http_request(url)
     WebHandler.url_validity_check(url) == false ? (return 'Invalid URL') : true 
+    WebHandler.data_from_url(url)
+  end
+
+  def self.parse_http_body(body)
   end
 
 end

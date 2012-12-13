@@ -8,8 +8,7 @@ describe Document do
       it 'returns an error when an invalid URL is passed' do
         Document.new_http_request(fake_url).should eql("Invalid URL")
       end
-
-      it 'makes a HTTP request when a valid URL is passed'
+      
     end
   end
 
