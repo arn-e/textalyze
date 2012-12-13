@@ -14,7 +14,7 @@ class Document < ActiveRecord::Base
     doc = Nokogiri::HTML(body)
     doc.text
   end
-
+  
   def self.new_document(author, title, body, submitted_by, url)
     new_doc = Document.new
     new_doc.author = author
