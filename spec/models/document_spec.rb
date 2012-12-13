@@ -1,17 +1,15 @@
 require 'spec_helper'
 
 describe Document do 
-  describe '.new_htt_request' do
+  describe '.new_http_request' do
     let(:fake_url) {"http://www.google.com/fizzbuzzyo"}
-    
+
     context 'document provided via URL' do
-      
       it 'returns an error when an invalid URL is passed' do
         Document.new_http_request(fake_url).should eql("Invalid URL")
       end
 
-      it 'fires off an HTTP request when a valid URL is passed'
-
+      it 'makes a HTTP request when a valid URL is passed'
     end
   end
 

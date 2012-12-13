@@ -6,8 +6,7 @@ class Document < ActiveRecord::Base
   attr_accessible :author, :body, :submitted_by, :title, :url
   
   def self.new_http_request(url)
-    return 'Invalid URL' if WebHandler.url_validity_check(url) == false
-
+    WebHandler.url_validity_check(url) == false ? (return 'Invalid URL') : true 
   end
 
 end

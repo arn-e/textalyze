@@ -216,7 +216,6 @@
         1,
         null,
         null,
-        null,
         null
       ],
       "/Users/arne/code/projects/text_analysis/textalyze/lib/web_parser.rb": [
@@ -226,10 +225,6 @@
         1,
         null,
         1,
-        1,
-        1,
-        null,
-        null,
         1,
         1,
         1,
@@ -320,6 +315,6 @@
         null
       ]
     },
-    "timestamp": 1355374439
+    "timestamp": 1355374714
   }
 }
