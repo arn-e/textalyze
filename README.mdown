@@ -7,7 +7,7 @@
 * Analysis performed on a number of dimensions :
   * Word Relevance Score (TF-IDF)
   * N-Grams (2-grams)
-  * Sentiment (emotion category lookup)
+  * Sentiment (Regressive Imagery Dictionary)
   * Optional : Trained Sentiment Analysis via Saplo
 
 ### To Do :
