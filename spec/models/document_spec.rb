@@ -24,11 +24,18 @@ describe Document do
 
   describe '.new_document' do
     before(:each) { @base_count = Document.count }
+    let(:body){"A body with ale, absinthium and burping"}
 
     it 'creates a new document' do
       Document.new_document("mock_body")
       Document.count.should eql(@base_count + 1)
     end
+
+    it 'stores a single value as the word count'
+
+    it 'evaluates the word count correctly'
+
+    it 'return th'
   end  
 
 end
