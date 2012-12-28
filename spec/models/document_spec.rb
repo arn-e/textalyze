@@ -14,7 +14,7 @@ describe Document do
   end
 
   describe '.parse_http_body' do
-    let(:mock_body) {"<body>Some Silly HTML Body</body>"}
+    let(:mock_body) {"<body>A body with ale, absinthium and burping</body>"}
     let(:mock_body_stripped) {"Some Silly HTML Body"}
 
     it 'removes HTML tags from the body' do
@@ -24,10 +24,10 @@ describe Document do
 
   describe '.new_document' do
     before(:each) { @base_count = Document.count }
-    let(:body){"A body with ale, absinthium and burping"}
+    let(:mock_body) {"<body>A body with ale, absinthium and burping</body>"}
 
     it 'creates a new document' do
-      Document.new_document("mock_body")
+      Document.new_document(mock_body)
       Document.count.should eql(@base_count + 1)
     end
 
@@ -35,7 +35,8 @@ describe Document do
 
     it 'evaluates the word count correctly'
 
-    it 'return th'
+    it 'returns a delimited list of word categories'
+    
   end  
 
 end
