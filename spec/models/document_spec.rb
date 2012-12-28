@@ -26,7 +26,7 @@ describe Document do
     let(:mock_body) {"<body>A body with ale, absinthium and burping</body>"}
     before(:each) {Document.new_document(mock_body)}
     before(:each) { @base_count = Document.count }
-    
+
     it 'creates a new document' do
       Document.new_document(mock_body)
       Document.count.should eql(@base_count + 1)
@@ -37,9 +37,15 @@ describe Document do
       doc.word_count.to_s.length.should eql(1)
     end
 
-    it 'evaluates the word count correctly'
+    it 'evaluates the word count correctly' do
+      doc = Document.last
+      doc.word_count.should eql(7)
+    end
 
-    it 'returns a delimited list of word categories'
+    it 'stores a delimtited list of categories' do
+      doc = Document.last
+      doc.rid_analysis.should eql("---\nORALITY: 3\nNARCISSISM: 1\n")
+    end 
 
   end  
 

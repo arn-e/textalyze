@@ -14,7 +14,7 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2012-12-28T16:17:05-05:00">2012-12-28T16:17:05-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2012-12-28T16:21:01-05:00">2012-12-28T16:21:01-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -24,8 +24,8 @@
     (<span class="covered_percent"><span class="yellow">82.98%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.95
+       <span class="green">
+         1.1
        </span>
     </span> hits/line)
   </h2>
@@ -97,7 +97,7 @@
         <td>19</td>
         <td>17</td>
         <td>2</td>
-        <td>3.1</td>
+        <td>4.8</td>
       </tr>
       
       <tr>
@@ -217,7 +217,7 @@
         <td>8</td>
         <td>8</td>
         <td>0</td>
-        <td>2.0</td>
+        <td>3.0</td>
       </tr>
       
       <tr>
@@ -530,14 +530,14 @@
           <code class="ruby">  def self.parse_http_body(body)</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="16">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="26" data-linenumber="16">
+          <span class="hits">26</span>
           
           <code class="ruby">    doc = Nokogiri::HTML(body)</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="17">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="26" data-linenumber="17">
+          <span class="hits">26</span>
           
           <code class="ruby">    doc.text</code>
         </li>
@@ -560,38 +560,38 @@
           <code class="ruby">  def self.new_document(body)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="21">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="21">
+          <span class="hits">5</span>
           
           <code class="ruby">    new_doc = Document.new</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="22">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="22">
+          <span class="hits">5</span>
           
           <code class="ruby">    new_doc.body = parse_http_body(parse_http_body(body))</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="23">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="23">
+          <span class="hits">5</span>
           
           <code class="ruby">    new_doc.word_count = TextProcessor.word_count(parse_http_body(body))</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="24">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="24">
+          <span class="hits">5</span>
           
           <code class="ruby">    new_doc.word_frequency = TextProcessor.word_frequency(parse_http_body(body)).to_json</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="25">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="25">
+          <span class="hits">5</span>
           
           <code class="ruby">    new_doc.rid_analysis = TextProcessor.rid_analysis(parse_http_body(body))</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="26">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="26">
+          <span class="hits">5</span>
           
           <code class="ruby">    new_doc.save!</code>
         </li>
@@ -2210,8 +2210,8 @@
           <code class="ruby">  def self.word_count(body)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="4">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="4">
+          <span class="hits">5</span>
           
           <code class="ruby">    body.split.length</code>
         </li>
@@ -2234,14 +2234,14 @@
           <code class="ruby">  def self.word_frequency(body, container = [], result_set = [])</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="8">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="8">
+          <span class="hits">5</span>
           
           <code class="ruby">    words = TfIdf.new(container.push(body.split)).tf</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="9">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="9">
+          <span class="hits">5</span>
           
           <code class="ruby">    { :word_frequency =&gt; words }</code>
         </li>
@@ -2264,8 +2264,8 @@
           <code class="ruby">  def self.rid_analysis(body, category_number = 1)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="13">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="13">
+          <span class="hits">5</span>
           
           <code class="ruby">    RiDic.category_distribution(body, 1)</code>
         </li>
