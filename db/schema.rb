@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121213224908) do
+ActiveRecord::Schema.define(:version => 20121228194611) do
 
   create_table "documents", :force => true do |t|
     t.string   "title"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20121213224908) do
     t.string   "url"
     t.integer  "word_count"
     t.text     "word_frequency"
+    t.text     "rid_analysis"
   end
 
 end

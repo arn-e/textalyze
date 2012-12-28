@@ -5,7 +5,7 @@ class Document < ActiveRecord::Base
   include WebHandler
   include TextProcessor
 
-  attr_accessible :author, :body, :submitted_by, :title, :url, :word_count, :word_frequency
+  attr_accessible :author, :body, :submitted_by, :title, :url, :word_count, :word_frequency, :rid_analysis
   
   def self.new_http_request(url)
     WebHandler.url_validity_check(url) == false ? (return 'Invalid URL') : true 
@@ -22,6 +22,7 @@ class Document < ActiveRecord::Base
     new_doc.body = body
     new_doc.word_count = TextProcessor.word_count(body)
     new_doc.word_frequency = TextProcessor.word_frequency(body).to_json
+    new_doc.rid_analysis = TextProcessor.rid_analysis(body)
     new_doc.save!
   end
 
