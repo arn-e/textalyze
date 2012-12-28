@@ -6,9 +6,9 @@ describe Document do
     let(:fake_url) {"http://www.google.com/fizzbuzzyo"}
 
     context 'document provided via URL' do
-      # it 'returns an error when an invalid URL is passed' do
-      #   Document.new_http_request(fake_url).should eql("Invalid URL")
-      # end
+      it 'returns an error when an invalid URL is passed' do
+        Document.new_http_request(fake_url).should eql("Invalid URL")
+      end
     end
 
   end
@@ -46,7 +46,6 @@ describe Document do
       doc = Document.last
       doc.rid_analysis.should eql("---\nORALITY: 3\nNARCISSISM: 1\n")
     end 
-
   end  
 
 end
