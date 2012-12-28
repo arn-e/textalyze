@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.7.1/application.js' type='text/javascript'></script>    
     <link href='./assets/0.7.1/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.7.1/favicon_green.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.7.1/favicon_yellow.png" />
     <link rel="icon" type="image/png" href="./assets/0.7.1/favicon.png" />
   </head>
   
@@ -14,27 +14,27 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2012-12-13T15:38:48-08:00">2012-12-13T15:38:48-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2012-12-28T16:17:05-05:00">2012-12-28T16:17:05-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">93.48%</span></span>
+    (<span class="covered_percent"><span class="yellow">82.98%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.8
+         0.95
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>18</b> files in total.
-    <b>92</b> relevant lines. 
-    <span class="green"><b>86</b> lines covered</span> and
-    <span class="red"><b>6</b> lines missed </span>
+    <b>94</b> relevant lines. 
+    <span class="green"><b>78</b> lines covered</span> and
+    <span class="red"><b>16</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -92,12 +92,12 @@
       
       <tr>
         <td class="strong"><a href="#d0f0f7f4b70e94f0d26ffeb387ad54665ae373f5" class="src_link" title="app/models/document.rb">app/models/document.rb</a></td>
-        <td class="green strong">94.74 %</td>
-        <td>32</td>
+        <td class="yellow strong">89.47 %</td>
+        <td>29</td>
         <td>19</td>
-        <td>18</td>
-        <td>1</td>
-        <td>0.9</td>
+        <td>17</td>
+        <td>2</td>
+        <td>3.1</td>
       </tr>
       
       <tr>
@@ -213,21 +213,21 @@
       <tr>
         <td class="strong"><a href="#5bc3f77337e4716f1bee63ae3a7cd17f23dedf0d" class="src_link" title="lib/text_processor.rb">lib/text_processor.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>14</td>
-        <td>6</td>
-        <td>6</td>
+        <td>16</td>
+        <td>8</td>
+        <td>8</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>2.0</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#9176922392ef4491754d145db4e01d312d4a0f49" class="src_link" title="lib/web_parser.rb">lib/web_parser.rb</a></td>
-        <td class="yellow strong">85.0 %</td>
+        <td class="red strong">40.0 %</td>
         <td>31</td>
         <td>20</td>
-        <td>17</td>
-        <td>3</td>
-        <td>0.9</td>
+        <td>8</td>
+        <td>12</td>
+        <td>0.4</td>
       </tr>
       
     </tbody>
@@ -335,7 +335,7 @@
         <li class="missed" data-hits="0" data-linenumber="7">
           
           
-          <code class="ruby">    Document.new_document(&quot;&quot;,&quot;&quot;,params[:body],&quot;&quot;,&quot;&quot;)</code>
+          <code class="ruby">    Document.new_document(params[:body])</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="8">
@@ -429,11 +429,11 @@
         <div class="source_table" id="d0f0f7f4b70e94f0d26ffeb387ad54665ae373f5">
   <div class="header">
     <h3>app/models/document.rb</h3>
-    <h4><span class="green">94.74 %</span> covered</h4>
+    <h4><span class="yellow">89.47 %</span> covered</h4>
     <div>
       <b>19</b> relevant lines. 
-      <span class="green"><b>18</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="green"><b>17</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
   
@@ -485,7 +485,7 @@
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">  attr_accessible :author, :body, :submitted_by, :title, :url, :word_count, :word_frequency</code>
+          <code class="ruby">  attr_accessible :author, :body, :submitted_by, :title, :url, :word_count, :word_frequency, :rid_analysis</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
@@ -500,8 +500,8 @@
           <code class="ruby">  def self.new_http_request(url)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="11">
+          
           
           <code class="ruby">    WebHandler.url_validity_check(url) == false ? (return 'Invalid URL') : true </code>
         </li>
@@ -530,14 +530,14 @@
           <code class="ruby">  def self.parse_http_body(body)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="16" data-linenumber="16">
+          <span class="hits">16</span>
           
           <code class="ruby">    doc = Nokogiri::HTML(body)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="16" data-linenumber="17">
+          <span class="hits">16</span>
           
           <code class="ruby">    doc.text</code>
         </li>
@@ -560,73 +560,55 @@
           <code class="ruby">  def self.new_document(body)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="21">
+          <span class="hits">3</span>
           
           <code class="ruby">    new_doc = Document.new</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="22">
+          <span class="hits">3</span>
           
-          <code class="ruby">    new_doc.body = body</code>
+          <code class="ruby">    new_doc.body = parse_http_body(parse_http_body(body))</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="23">
+          <span class="hits">3</span>
           
-          <code class="ruby">    new_doc.word_count = TextProcessor.word_count(body)</code>
+          <code class="ruby">    new_doc.word_count = TextProcessor.word_count(parse_http_body(body))</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="24">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="24">
+          <span class="hits">3</span>
           
-          <code class="ruby">    new_doc.word_frequency = TextProcessor.word_frequency(body).to_json</code>
+          <code class="ruby">    new_doc.word_frequency = TextProcessor.word_frequency(parse_http_body(body)).to_json</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="25">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    new_doc.rid_analysis = TextProcessor.rid_analysis(parse_http_body(body))</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="26">
+          <span class="hits">3</span>
           
           <code class="ruby">    new_doc.save!</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="28">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def document_analysis</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="29">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="30">
-          
-          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby">end</code>
@@ -2201,8 +2183,8 @@
     <h3>lib/text_processor.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>6</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2228,8 +2210,8 @@
           <code class="ruby">  def self.word_count(body)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="4">
+          <span class="hits">3</span>
           
           <code class="ruby">    body.split.length</code>
         </li>
@@ -2252,14 +2234,14 @@
           <code class="ruby">  def self.word_frequency(body, container = [], result_set = [])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="8">
+          <span class="hits">3</span>
           
           <code class="ruby">    words = TfIdf.new(container.push(body.split)).tf</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="9">
+          <span class="hits">3</span>
           
           <code class="ruby">    { :word_frequency =&gt; words }</code>
         </li>
@@ -2267,28 +2249,40 @@
         <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby">    # words.first.each {|i| result_set &lt;&lt; i[0]}</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby">    # result_set[0..5]</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.rid_analysis(body, category_number = 1)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="13">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    RiDic.category_distribution(body, 1)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">end</code>
@@ -2301,11 +2295,11 @@
         <div class="source_table" id="9176922392ef4491754d145db4e01d312d4a0f49">
   <div class="header">
     <h3>lib/web_parser.rb</h3>
-    <h4><span class="yellow">85.0 %</span> covered</h4>
+    <h4><span class="red">40.0 %</span> covered</h4>
     <div>
       <b>20</b> relevant lines. 
-      <span class="green"><b>17</b> lines covered</span> and
-      <span class="red"><b>3</b> lines missed.</span>
+      <span class="green"><b>8</b> lines covered</span> and
+      <span class="red"><b>12</b> lines missed.</span>
     </div>
   </div>
   
@@ -2354,14 +2348,14 @@
           <code class="ruby">  def self.url_validity_check(url)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="8">
+          
           
           <code class="ruby">    response = query_api(url, 'head')</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="9">
+          
           
           <code class="ruby">    response.header.message == &quot;OK&quot; ? true : false</code>
         </li>
@@ -2408,20 +2402,20 @@
           <code class="ruby">  def self.set_connection_parameters(url, request_type, port = 80)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="17">
+          
           
           <code class="ruby">    uri = URI.parse(url)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="18">
+          
           
           <code class="ruby">    http = Net::HTTP.new(uri.host, port)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="19">
+          
           
           <code class="ruby">    if port == 443</code>
         </li>
@@ -2444,14 +2438,14 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="23">
+          
           
           <code class="ruby">    request_type == 'get' ? (request = Net::HTTP::Get.new(uri.request_uri)) : (request = Net::HTTP::Head.new(uri.request_uri))</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="24">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="24">
+          
           
           <code class="ruby">    [request, http]</code>
         </li>
@@ -2474,14 +2468,14 @@
           <code class="ruby">  def self.query_api(url, request_type = 'get', port = 80)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="28">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="28">
+          
           
           <code class="ruby">    request, http = self.set_connection_parameters(url, request_type, port)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="29">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="29">
+          
           
           <code class="ruby">    response = http.request(request)</code>
         </li>

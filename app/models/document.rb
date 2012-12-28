@@ -19,10 +19,10 @@ class Document < ActiveRecord::Base
   
   def self.new_document(body)
     new_doc = Document.new
-    new_doc.body = parse_http_body(body)
-    new_doc.word_count = TextProcessor.word_count(body)
-    new_doc.word_frequency = TextProcessor.word_frequency(body).to_json
-    new_doc.rid_analysis = TextProcessor.rid_analysis(body)
+    new_doc.body = parse_http_body(parse_http_body(body))
+    new_doc.word_count = TextProcessor.word_count(parse_http_body(body))
+    new_doc.word_frequency = TextProcessor.word_frequency(parse_http_body(body)).to_json
+    new_doc.rid_analysis = TextProcessor.rid_analysis(parse_http_body(body))
     new_doc.save!
   end
 
