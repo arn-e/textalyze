@@ -25,8 +25,4 @@ class Document < ActiveRecord::Base
     new_doc.save!
   end
 
-  def document_analysis
-
-  end
-
 end
