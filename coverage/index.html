@@ -14,26 +14,26 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2012-12-29T00:37:52-05:00">2012-12-29T00:37:52-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2012-12-29T16:48:47-05:00">2012-12-29T16:48:47-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">93.68%</span></span>
+    (<span class="covered_percent"><span class="green">93.75%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.02
+         1.03
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>18</b> files in total.
-    <b>95</b> relevant lines. 
-    <span class="green"><b>89</b> lines covered</span> and
+    <b>96</b> relevant lines. 
+    <span class="green"><b>90</b> lines covered</span> and
     <span class="red"><b>6</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -213,11 +213,11 @@
       <tr>
         <td class="strong"><a href="#5bc3f77337e4716f1bee63ae3a7cd17f23dedf0d" class="src_link" title="lib/text_processor.rb">lib/text_processor.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>16</td>
-        <td>8</td>
-        <td>8</td>
+        <td>17</td>
+        <td>9</td>
+        <td>9</td>
         <td>0</td>
-        <td>3.0</td>
+        <td>3.2</td>
       </tr>
       
       <tr>
@@ -593,7 +593,7 @@
         <li class="covered" data-hits="5" data-linenumber="26">
           <span class="hits">5</span>
           
-          <code class="ruby">    new_doc.rid_analysis = TextProcessor.rid_analysis(body)</code>
+          <code class="ruby">    new_doc.rid_analysis = TextProcessor.rid_analysis(body).to_json</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="27">
@@ -2189,8 +2189,8 @@
     <h3>lib/text_processor.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>8</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
+      <b>9</b> relevant lines. 
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2249,7 +2249,7 @@
         <li class="covered" data-hits="5" data-linenumber="9">
           <span class="hits">5</span>
           
-          <code class="ruby">    { :word_frequency =&gt; words }</code>
+          <code class="ruby">    { :word_frequency =&gt; words[0] }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
@@ -2273,22 +2273,28 @@
         <li class="covered" data-hits="5" data-linenumber="13">
           <span class="hits">5</span>
           
-          <code class="ruby">    RiDic.category_distribution(body, 1)</code>
+          <code class="ruby">    rid_results = RiDic.category_distribution(body, 1)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="covered" data-hits="5" data-linenumber="14">
+          <span class="hits">5</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    { :rid_analysis =&gt; rid_results }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">end</code>

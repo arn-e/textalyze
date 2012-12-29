@@ -44,7 +44,7 @@ describe Document do
 
     it 'stores a delimited list of categories' do
       doc = Document.last
-      doc.rid_analysis.should eql("---\nORALITY: 3\nNARCISSISM: 1\n")
+      doc.rid_analysis.should eql("{\"rid_analysis\":{\"ORALITY\":3,\"NARCISSISM\":1}}")
     end 
   end  
 
