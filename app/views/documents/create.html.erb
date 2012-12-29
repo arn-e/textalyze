@@ -1,7 +1,7 @@
 <div class="span2" id="display">
-    <%= @document.body %> 
-    <%= @document.word_count %>
-    <%= @document.word_frequency %>
-    <%= @document.rid_analysis %>
+    <p class="result_display" id="orig_text">Original Text : <%= @document.body %></p>
+    <p class="result_display" id="word_count"><%= @document.word_count %></p>
+    <p class="result_display" id="word_frequency"><%= @document.word_frequency %></p>
+    <p class="result_display" id="rid_analysis"><%= @document.rid_analysis %></p>
 </div>
   
