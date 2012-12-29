@@ -1,7 +1,28 @@
 <div class="span2" id="display">
-    <p class="result_display" id="orig_text"><b>Original Text : </b><%= @document.body %></p>
-    <p class="result_display" id="word_count"><b>Word Count : </b><%= @document.word_count %></p>
-    <p class="result_display" id="word_frequency"><b>Word Frequency : </b><%= @document.word_frequency %></p>
-    <p class="result_display" id="rid_analysis"><b>RID Analysis : </b><%= @document.rid_analysis %></p>
+    <p class="result_display" id="orig_text"><b>Original Text : </b>
+      <ul>
+        <li class="orig_text_item"><%= @document.body %></li>
+      </ul>
+    </p>
+    <p class="result_display" id="word_count"><b>Word Count : </b>
+      <ul>
+        <li class="word_count_item"><%= @document.word_count %></li>
+      </ul>
+    </p>
+    <p class="result_display" id="word_frequency"><b>Word Frequency : </b>
+      <ol>
+        <% JSON.parse(@document.word_frequency)["word_frequency"].each do |elem| %>
+          <li class="frequency_item"><%= elem[0] %> : <%= elem[1] %></li>
+        <% end %>
+      </ol>
+        
+    </p>
+    <p class="result_display" id="rid_analysis"><b>RID Analysis : </b>
+      <ol>
+        <% JSON.parse(@document.rid_analysis)["rid_analysis"].each do |elem| %>
+          <li class="rid_item"><%= elem[0] %> : <%= elem[1] %></li>
+        <% end %>
+      </ol>
+    </p>
 </div>
   
