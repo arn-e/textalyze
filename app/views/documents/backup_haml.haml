@@ -1,0 +1,13 @@
+%html
+  %head
+    %title Textalyze
+
+  %body
+    
+    %title Hello testing textalyze
+    %p 
+    %form{ :action => "documents", :method => "post"}
+      %label{:for => "body"} Textalyze This : 
+      %textarea{:name => "body"}
+      %input{:type => "submit", :value => "Send", :class => "button"}
+

@@ -5,8 +5,8 @@ gem 'rails', '3.2.9'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem "bootstrap-sass", ">= 2.1.1.0"
 gem 'simplecov'
-gem 'haml-rails'
 gem 'nokogiri'
 gem 'sqlite3'
 gem 'tf_idf'

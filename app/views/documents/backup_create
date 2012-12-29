@@ -1,0 +1,11 @@
+%html
+  %head
+    %title Textalyze - Create
+
+  %body
+    %h2 New Document Creation
+    %div #{@document.body}
+    %div #{@document.word_count}
+    %div #{@document.word_frequency}
+    %div #{@document.rid_analysis}
+    

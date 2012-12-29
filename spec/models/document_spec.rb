@@ -42,7 +42,7 @@ describe Document do
       doc.word_count.should eql(7)
     end
 
-    it 'stores a delimtited list of categories' do
+    it 'stores a delimited list of categories' do
       doc = Document.last
       doc.rid_analysis.should eql("---\nORALITY: 3\nNARCISSISM: 1\n")
     end 
