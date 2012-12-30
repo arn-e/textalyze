@@ -5,8 +5,10 @@ module TextProcessor
   end
 
   def self.word_frequency(body, container = [], result_set = [])
+    sorted = {}
     words = TfIdf.new(container.push(body.split)).tf
-    { :word_frequency => words[0] }
+    words[0].sort_by {|key, value| value}.reverse.each {|elem| sorted[elem[0]] = elem[1]}
+    { :word_frequency => sorted }
   end
 
   def self.rid_analysis(body, category_number = 1)
