@@ -10,10 +10,12 @@
   * Sentiment (Regressive Imagery Dictionary)
   * Optional : Trained Sentiment Analysis via Saplo
 
-### To Do :
+### To Do (Issues):
+
+1. Limit result set shown for word frequency 
+
+### To Do (Overview):
 
 1. Add unit tests for document & document upload
-2. Build prototype UI
-3. Add Integration coverage
-4. Incorporate Backbone
-5. TBD
+2. Add Integration coverage
+3. Incorporate Backbone
