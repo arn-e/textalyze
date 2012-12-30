@@ -296,22 +296,44 @@
         null
       ],
       "/Users/arne/code/projects/text_analysis/textalyze/lib/text_processor.rb": [
-        1,
         null,
-        1,
-        5,
         null,
         null,
         1,
-        5,
-        5,
-        75,
+        null,
+        1,
         5,
         null,
         null,
         1,
         5,
         5,
+        45,
+        5,
+        null,
+        null,
+        1,
+        5,
+        5,
+        null,
+        null,
+        1,
+        null,
+        1,
+        5,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        40,
+        25,
+        25,
+        5,
+        null,
         null,
         null,
         null
@@ -380,6 +402,6 @@
         null
       ]
     },
-    "timestamp": 1356896824
+    "timestamp": 1356898417
   }
 }

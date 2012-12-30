@@ -14,26 +14,26 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2012-12-30T14:47:04-05:00">2012-12-30T14:47:04-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2012-12-30T15:13:37-05:00">2012-12-30T15:13:37-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">94.44%</span></span>
+    (<span class="covered_percent"><span class="green">94.78%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.47
+         1.48
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>18</b> files in total.
-    <b>108</b> relevant lines. 
-    <span class="green"><b>102</b> lines covered</span> and
+    <b>115</b> relevant lines. 
+    <span class="green"><b>109</b> lines covered</span> and
     <span class="red"><b>6</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -213,11 +213,11 @@
       <tr>
         <td class="strong"><a href="#5bc3f77337e4716f1bee63ae3a7cd17f23dedf0d" class="src_link" title="lib/text_processor.rb">lib/text_processor.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>19</td>
-        <td>11</td>
-        <td>11</td>
+        <td>41</td>
+        <td>18</td>
+        <td>18</td>
         <td>0</td>
-        <td>9.9</td>
+        <td>10.1</td>
       </tr>
       
       <tr>
@@ -2231,8 +2231,8 @@
     <h3>lib/text_processor.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>11</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
+      <b>18</b> relevant lines. 
+      <span class="green"><b>18</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2240,115 +2240,247 @@
   <pre>
     <ol>
       
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="1">
           
-          <code class="ruby">module TextProcessor</code>
+          
+          <code class="ruby"># notes : </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
           
           
+          <code class="ruby"># improve legibility in word frequency method</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.word_count(body)</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="4">
-          <span class="hits">5</span>
-          
-          <code class="ruby">    body.split.length</code>
+          <code class="ruby">module TextProcessor</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.word_count(body)</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="7">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    body.split.length</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
+        <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
           <code class="ruby">  def self.word_frequency(body, container = [], result_set = [])</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="8">
+        <li class="covered" data-hits="5" data-linenumber="11">
           <span class="hits">5</span>
           
           <code class="ruby">    sorted = {}</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="9">
+        <li class="covered" data-hits="5" data-linenumber="12">
           <span class="hits">5</span>
           
-          <code class="ruby">    words = TfIdf.new(container.push(body.split)).tf</code>
+          <code class="ruby">    words = TfIdf.new(container.push(sanitized(body.downcase.split))).tf</code>
         </li>
       
-        <li class="covered" data-hits="75" data-linenumber="10">
-          <span class="hits">75</span>
+        <li class="covered" data-hits="45" data-linenumber="13">
+          <span class="hits">45</span>
           
-          <code class="ruby">    words[0].sort_by {|key, value| value}.reverse.each {|elem| sorted[elem[0]] = elem[1]}</code>
+          <code class="ruby">    words[0].sort_by {|key, value| value}.reverse[0...17].each {|elem| sorted[elem[0]] = elem[1]}</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="11">
+        <li class="covered" data-hits="5" data-linenumber="14">
           <span class="hits">5</span>
           
           <code class="ruby">    { :word_frequency =&gt; sorted }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
           <code class="ruby">  def self.rid_analysis(body, category_number = 1)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="15">
+        <li class="covered" data-hits="5" data-linenumber="18">
           <span class="hits">5</span>
           
           <code class="ruby">    rid_results = RiDic.category_distribution(body, 1)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="16">
+        <li class="covered" data-hits="5" data-linenumber="19">
           <span class="hits">5</span>
           
           <code class="ruby">    { :rid_analysis =&gt; rid_results }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.sanitized(string)</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="25">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    words = {&quot;about&quot; =&gt; 1,&quot;after&quot; =&gt; 1,&quot;all&quot; =&gt; 1,&quot;also&quot; =&gt; 1,&quot;an&quot; =&gt; 1,&quot;and&quot; =&gt; 1,&quot;another&quot; =&gt; 1,&quot;any&quot; =&gt; 1,&quot;are&quot; =&gt; 1,&quot;as&quot; =&gt; 1,&quot;at&quot; =&gt; 1,&quot;be&quot; =&gt; 1,&quot;because&quot; =&gt; 1,&quot;been&quot; =&gt; 1,&quot;before&quot; =&gt; 1,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">      &quot;being&quot; =&gt; 1,&quot;between&quot; =&gt; 1,&quot;both&quot; =&gt; 1,&quot;but&quot; =&gt; 1,&quot;by&quot; =&gt; 1,&quot;came&quot; =&gt; 1,&quot;can&quot; =&gt; 1,&quot;come&quot; =&gt; 1,&quot;could&quot; =&gt; 1,&quot;did&quot; =&gt; 1,&quot;do&quot; =&gt; 1,&quot;each&quot; =&gt; 1,&quot;for&quot; =&gt; 1,&quot;from&quot; =&gt; 1,&quot;get&quot; =&gt; 1,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">      &quot;got&quot; =&gt; 1,&quot;has&quot; =&gt; 1,&quot;had&quot; =&gt; 1,&quot;he&quot; =&gt; 1,&quot;have&quot; =&gt; 1,&quot;her&quot; =&gt; 1,&quot;here&quot; =&gt; 1,&quot;him&quot; =&gt; 1,&quot;himself&quot; =&gt; 1,&quot;his&quot; =&gt; 1,&quot;how&quot; =&gt; 1,&quot;if&quot; =&gt; 1,&quot;in&quot; =&gt; 1,&quot;into&quot; =&gt; 1,&quot;is&quot; =&gt; 1,&quot;it&quot; =&gt; 1,&quot;like&quot; =&gt;1,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">      &quot;make&quot; =&gt; 1,&quot;many&quot; =&gt; 1,&quot;me&quot; =&gt; 1,&quot;might&quot; =&gt; 1,&quot;more&quot; =&gt; 1,&quot;most&quot; =&gt; 1,&quot;much&quot; =&gt; 1,&quot;must&quot; =&gt; 1,&quot;my&quot; =&gt; 1,&quot;never&quot; =&gt; 1,&quot;now&quot; =&gt; 1,&quot;of&quot; =&gt; 1,&quot;on&quot; =&gt; 1,&quot;only&quot; =&gt; 1,&quot;or&quot; =&gt; 1,&quot;other&quot; =&gt; 1,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">      &quot;our&quot; =&gt; 1,&quot;out&quot; =&gt; 1,&quot;over&quot; =&gt; 1,&quot;said&quot; =&gt; 1,&quot;same&quot; =&gt; 1,&quot;see&quot; =&gt; 1,&quot;should&quot; =&gt; 1,&quot;since&quot; =&gt; 1,&quot;some&quot; =&gt; 1,&quot;still&quot; =&gt; 1,&quot;such&quot; =&gt; 1,&quot;take&quot; =&gt; 1,&quot;than&quot; =&gt; 1,&quot;that&quot; =&gt; 1,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">      &quot;the&quot; =&gt; 1,&quot;their&quot; =&gt; 1,&quot;them&quot; =&gt; 1,&quot;then&quot; =&gt; 1,&quot;there&quot; =&gt; 1,&quot;these&quot; =&gt; 1,&quot;they&quot; =&gt; 1,&quot;this&quot; =&gt; 1,&quot;those&quot; =&gt; 1,&quot;through&quot; =&gt; 1,&quot;to&quot; =&gt; 1,&quot;too&quot; =&gt; 1,&quot;under&quot; =&gt; 1,&quot;up&quot; =&gt; 1,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">      &quot;very&quot; =&gt; 1,&quot;was&quot; =&gt; 1,&quot;way&quot; =&gt; 1,&quot;we&quot; =&gt; 1,&quot;well&quot; =&gt; 1,&quot;were&quot; =&gt; 1,&quot;what&quot; =&gt; 1,&quot;where&quot; =&gt; 1,&quot;which&quot; =&gt; 1,&quot;while&quot; =&gt; 1,&quot;who&quot; =&gt; 1,&quot;with&quot; =&gt; 1,&quot;would&quot; =&gt; 1,&quot;you&quot; =&gt; 1,&quot;your&quot; =&gt; 1,&quot;a&quot; =&gt; 1,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">      &quot;b&quot; =&gt; 1,&quot;c&quot; =&gt; 1,&quot;d&quot; =&gt; 1,&quot;e&quot; =&gt; 1,&quot;f&quot; =&gt; 1,&quot;g&quot; =&gt; 1,&quot;h&quot; =&gt; 1,&quot;i&quot; =&gt; 1,&quot;j&quot; =&gt; 1,&quot;k&quot; =&gt; 1,&quot;l&quot; =&gt; 1,&quot;m&quot; =&gt; 1,&quot;n&quot; =&gt; 1,&quot;o&quot; =&gt; 1,&quot;p&quot; =&gt; 1,&quot;q&quot; =&gt; 1,&quot;r&quot; =&gt; 1,&quot;s&quot; =&gt; 1,&quot;t&quot; =&gt; 1,&quot;u&quot; =&gt; 1,&quot;v&quot; =&gt; 1,&quot;w&quot; =&gt; 1,&quot;x&quot; =&gt; 1,&quot;y&quot; =&gt; 1,&quot;z&quot; =&gt; 1,&quot;$&quot; =&gt; 1,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">      &quot;1&quot; =&gt; 1,&quot;2&quot; =&gt; 1,&quot;3&quot; =&gt; 1,&quot;4&quot; =&gt; 1,&quot;5&quot; =&gt; 1,&quot;6&quot; =&gt; 1,&quot;7&quot; =&gt; 1,&quot;8&quot; =&gt; 1,&quot;9&quot; =&gt; 1,&quot;0&quot; =&gt; 1,&quot;_&quot; =&gt; 1}</code>
+        </li>
+      
+        <li class="covered" data-hits="40" data-linenumber="34">
+          <span class="hits">40</span>
+          
+          <code class="ruby">    string = string.delete_if {|i| words[i] == 1}  </code>
+        </li>
+      
+        <li class="covered" data-hits="25" data-linenumber="35">
+          <span class="hits">25</span>
+          
+          <code class="ruby">    string = string.delete_if {|i| i.gsub!(/\W*/,&quot;&quot;) == &quot;&quot;}</code>
+        </li>
+      
+        <li class="covered" data-hits="25" data-linenumber="36">
+          <span class="hits">25</span>
+          
+          <code class="ruby">    string = string.delete_if {|i| i.gsub!(/\d*/,&quot;&quot;) == &quot;&quot;}</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="37">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    string</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby">end</code>
