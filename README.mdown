@@ -3,10 +3,10 @@
 
 ### Usage :
 
-* User submits text document via upload link or URL
+* User submits text document via URL or pasting contents directly
 * Analysis performed on a number of dimensions :
   * Word Relevance Score (TF-IDF)
-  * N-Grams (2-grams)
+  * N-Grams (2-grams) - TBD
   * Sentiment (Regressive Imagery Dictionary)
   * Optional : Trained Sentiment Analysis via Saplo
 
