@@ -18,8 +18,12 @@ class Document < ActiveRecord::Base
   end
   
   def self.new_document(body)
+    
+    http_result = new_http_request(body)
+    http_result == "Invalid URL" ? (body = parse_http_body(body)) : (body = parse_http_body(http_result.body))
+    
+    # wrap this in separate method
     new_doc = Document.new
-    body = parse_http_body(body)
     new_doc.body = body
     new_doc.word_count = TextProcessor.word_count(body)
     new_doc.word_frequency = TextProcessor.word_frequency(body).to_json

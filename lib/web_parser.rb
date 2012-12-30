@@ -1,12 +1,22 @@
-# Note : JSON is no longer being parsed in the query method
 require 'uri'
 require 'net/http'
 require 'net/https'
 
 module WebHandler
   def self.url_validity_check(url)
+    if url_format_check(url) == "Invalid URL" 
+      return false
+    end
     response = query_api(url, 'head')
     response.header.message == "OK" ? true : false
+  end
+
+  def self.url_format_check(url)
+    begin
+      URI.parse(url)
+    rescue
+      return "Invalid URL"
+    end
   end
 
   def self.data_from_url(url)
