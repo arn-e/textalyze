@@ -23,6 +23,8 @@ class Document < ActiveRecord::Base
     document_creation(body)    
   end
 
+  private 
+  
   def self.document_creation(body)
     new_doc = Document.new
     new_doc.body = body
