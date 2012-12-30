@@ -1,7 +1,7 @@
 <div class="span2" id="display">
     <p class="result_display" id="orig_text"><b>Original Text : </b>
       <ul>
-        <li class="orig_text_item"><%= @document.body %></li>
+        <li class="orig_text_item"><%= @document.body[0..144] %>...</li>
       </ul>
     </p>
     <p class="result_display" id="word_count"><b>Word Count : </b>

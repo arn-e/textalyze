@@ -37,5 +37,4 @@ module TextProcessor
     string
   end
 
-
 end
