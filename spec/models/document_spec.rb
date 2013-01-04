@@ -46,6 +46,29 @@ describe Document do
       doc = Document.last
       doc.rid_analysis.should eql("{\"rid_analysis\":{\"ORALITY\":3,\"NARCISSISM\":1}}")
     end 
+
+    context 'url passed as parameter' do
+      let(:mock_body) {"http://www.arnefostvedt.com/test_page.html"}
+      before(:each) {Document.new_document(mock_body)}
+
+      it 'parses a URL passed as a parameter' do
+        doc = Document.last
+        doc.body.should eql('sample body')
+      end
+
+    end
+
+    context 'body of text passed as parameter' do
+      let(:mock_body) {"<body>A body with ale, absinthium and burping</body>"}
+      before(:each) {Document.new_document(mock_body)}
+            
+      it 'parses a body of text passed in directly' do
+        doc = Document.last
+        doc.body.should eql('A body with ale, absinthium and burping')
+      end
+
+    end
+
   end  
 
 end
