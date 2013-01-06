@@ -1,3 +1,41 @@
 @import "bootstrap";
-body { padding-top: 60px; }
+
+body { 	padding-top: 60px;
+				background-color: #6161A1
+			}
+
 @import "bootstrap-responsive";
+
+.navbar .brand{ margin-left: 20px }
+
+.navbar-inner {	background-color: #E1E9FF;
+  							background-image: none
+							}
+
+.main{margin-top: 20px}
+
+.container{margin-left: 0px}
+
+#direct_input{	margin: 35px 0px 35px 30px;
+								text-align: center
+							}
+
+#text_body{	margin: 20px 5px 20px 0px }
+
+.textalyze{ font-weight: 200;
+						color: #5A5A5A
+					}
+
+#resultpage{ margin-left: 30px }
+
+#result{  text-align: center;
+					margin-bottom: 30px 
+				}
+
+h2{ font-size: 20px }
+
+.white{ background-color: white}
+
+.table{ background-color: #CAD2E6 }
+
+.table tbody tr:hover td, .table tbody tr:hover th { background-color: #E7EDFF }

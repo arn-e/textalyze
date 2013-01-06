@@ -1,0 +1,14 @@
+<table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Word</th>
+        <th>Frequency</th>
+      </tr>
+    </thead>
+      <% JSON.parse(document.rid_analysis)["rid_analysis"].each do |elem| %>
+        <tr><td class="rid_item"><%= elem[0].capitalize %></td><td class="rid_item">  <%= elem[1] %></td></tr>
+      <% end %>
+ </table>
+
+
+
