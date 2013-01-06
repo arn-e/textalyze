@@ -7,20 +7,20 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <header class="navbar navbar-fixed-top">
-      <nav class="navbar-inner">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
         <div class="container">
           <%= render "layouts/navigation" %>
         </div>
-      </nav>
-    </header>
-    <div id="main" role="main">
-      <div class="container">
+      </div>
+    </div>
+    <div class="main offset3" role="main">
+      <div class="container span6" id="cont">
         <div class="content">
            <div class="row">
-            <div class="span12">
+            <div class="span6">
               <%= yield %>          
-            </div>
+            </div> 
           </div>
           <footer>
           </footer>

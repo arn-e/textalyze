@@ -1,28 +1,23 @@
-<div class="span2" id="display">
-    <p class="result_display" id="orig_text"><b>Original Text : </b>
-      <ul>
-        <li class="orig_text_item"><%= @document.body[0..144] %>...</li>
-      </ul>
-    </p>
-    <p class="result_display" id="word_count"><b>Word Count : </b>
-      <ul>
-        <li class="word_count_item"><%= @document.word_count %></li>
-      </ul>
-    </p>
-    <p class="result_display" id="word_frequency"><b>Word Frequency : </b>
-      <ol>
-        <% JSON.parse(@document.word_frequency)["word_frequency"].each do |elem| %>
-          <li class="frequency_item"><%= elem[0] %> : <%= elem[1] %></li>
-        <% end %>
-      </ol>
-        
-    </p>
-    <p class="result_display" id="rid_analysis"><b>RID Analysis : </b>
-      <ol>
-        <% JSON.parse(@document.rid_analysis)["rid_analysis"].each do |elem| %>
-          <li class="rid_item"><%= elem[0] %> : <%= elem[1] %></li>
-        <% end %>
-      </ol>
-    </p>
+<div id="resultpage">
+  <h1 id="result"> Results</h1>
+
+  <table class="table table-bordered">
+    <tr class="white">
+      <th>Original Text</th>
+      <td><%= @document.body[0..144] %>...</td>
+    <tr class="white">
+      <th>Word Count</th>
+      <td><%= @document.word_count %></td>
+    <tr>
+  </table>
+  
+  <h2>Word Frequency </h2>
+  <p class="result_display" id="word_frequency">
+    <%= render 'wordfrequency', :document => @document%>
+  </p>
+  <h2>RID Analysis </h2>
+  <p class="result_display" id="rid_analysis">
+    <%= render 'rid_analysis', :document => @document%>
+  </p>
 </div>
   

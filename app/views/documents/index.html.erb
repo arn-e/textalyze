@@ -1,6 +1,8 @@
-<div class="span1" id="direct_input">
+<div id="direct_input">
+	<h1> Textalyze </h1>
+</br>
   <%= form_tag('documents', :method => "post", :remote => true) do %>
-    <%= text_field_tag "text_body" %>
-    <%= submit_tag "Textalyze This", :class => 'button' %> 
+    <%= text_field_tag "text_body" %> <br/>
+    <%= submit_tag "Textalyze This", :class => 'textalyze btn' %> 
   <% end %>
 </div>    
