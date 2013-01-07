@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/arne/code/projects/text_analysis/textalyze/config/environment.rb": [
+      "/Users/arne/code/projects/textalyze/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/arne/code/projects/text_analysis/textalyze/config/application.rb": [
+      "/Users/arne/code/projects/textalyze/config/application.rb": [
         1,
         null,
         1,
@@ -72,7 +72,7 @@
         null,
         null
       ],
-      "/Users/arne/code/projects/text_analysis/textalyze/config/boot.rb": [
+      "/Users/arne/code/projects/textalyze/config/boot.rb": [
         1,
         null,
         null,
@@ -80,7 +80,7 @@
         null,
         1
       ],
-      "/Users/arne/code/projects/text_analysis/textalyze/config/environments/test.rb": [
+      "/Users/arne/code/projects/textalyze/config/environments/test.rb": [
         1,
         null,
         null,
@@ -119,7 +119,7 @@
         1,
         null
       ],
-      "/Users/arne/code/projects/text_analysis/textalyze/config/initializers/backtrace_silencers.rb": [
+      "/Users/arne/code/projects/textalyze/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -128,7 +128,7 @@
         null,
         null
       ],
-      "/Users/arne/code/projects/text_analysis/textalyze/config/initializers/inflections.rb": [
+      "/Users/arne/code/projects/textalyze/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -145,14 +145,14 @@
         null,
         null
       ],
-      "/Users/arne/code/projects/text_analysis/textalyze/config/initializers/mime_types.rb": [
+      "/Users/arne/code/projects/textalyze/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null,
         null
       ],
-      "/Users/arne/code/projects/text_analysis/textalyze/config/initializers/secret_token.rb": [
+      "/Users/arne/code/projects/textalyze/config/initializers/secret_token.rb": [
         null,
         null,
         null,
@@ -161,7 +161,7 @@
         null,
         1
       ],
-      "/Users/arne/code/projects/text_analysis/textalyze/config/initializers/session_store.rb": [
+      "/Users/arne/code/projects/textalyze/config/initializers/session_store.rb": [
         null,
         null,
         1,
@@ -171,7 +171,7 @@
         null,
         null
       ],
-      "/Users/arne/code/projects/text_analysis/textalyze/config/initializers/wrap_parameters.rb": [
+      "/Users/arne/code/projects/textalyze/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -187,25 +187,21 @@
         1,
         null
       ],
-      "/Users/arne/code/projects/text_analysis/textalyze/app/controllers/application_controller.rb": [
+      "/Users/arne/code/projects/textalyze/app/controllers/application_controller.rb": [
         1,
         1,
         null
       ],
-      "/Users/arne/code/projects/text_analysis/textalyze/app/helpers/application_helper.rb": [
+      "/Users/arne/code/projects/textalyze/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/arne/code/projects/text_analysis/textalyze/app/helpers/documents_helper.rb": [
+      "/Users/arne/code/projects/textalyze/app/helpers/documents_helper.rb": [
         1,
         null
       ],
-      "/Users/arne/code/projects/text_analysis/textalyze/app/controllers/documents_controller.rb": [
+      "/Users/arne/code/projects/textalyze/app/controllers/documents_controller.rb": [
         1,
-        null,
-        1,
-        null,
-        null,
         null,
         1,
         0,
@@ -222,7 +218,7 @@
         null,
         null
       ],
-      "/Users/arne/code/projects/text_analysis/textalyze/app/models/document.rb": [
+      "/Users/arne/code/projects/textalyze/app/models/document.rb": [
         1,
         1,
         null,
@@ -246,11 +242,18 @@
         9,
         9,
         9,
+        7,
+        7,
+        null,
+        2,
+        2,
+        null,
         null,
         null,
         1,
         null,
         1,
+        9,
         9,
         9,
         9,
@@ -261,7 +264,7 @@
         null,
         null
       ],
-      "/Users/arne/code/projects/text_analysis/textalyze/lib/web_parser.rb": [
+      "/Users/arne/code/projects/textalyze/lib/web_parser.rb": [
         1,
         1,
         1,
@@ -304,7 +307,7 @@
         null,
         null
       ],
-      "/Users/arne/code/projects/text_analysis/textalyze/lib/text_processor.rb": [
+      "/Users/arne/code/projects/textalyze/lib/text_processor.rb": [
         null,
         null,
         null,
@@ -346,7 +349,7 @@
         null,
         null
       ],
-      "/Users/arne/code/projects/text_analysis/textalyze/config/routes.rb": [
+      "/Users/arne/code/projects/textalyze/config/routes.rb": [
         1,
         null,
         null,
@@ -416,6 +419,6 @@
         null
       ]
     },
-    "timestamp": 1357542558
+    "timestamp": 1357556464
   }
 }

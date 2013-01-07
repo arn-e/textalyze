@@ -2,11 +2,16 @@
     <thead>
       <tr>
         <th class="column1">Text</th>
+        <th class="column1">URL</th>
         <th class="column2">Size</th>
       </tr>
     </thead>
       <% docs.each do |doc| %>
-      <tr><td class="library_item column_1"><%= link_to doc.body[0..17], "/documents/#{doc.id}" %></td><td class="library_item column2">  <%= doc.word_count %></td></tr>
+      <tr>
+      	<td class="library_item column_1">  <%= link_to doc.body[0..17], "/documents/#{doc.id}" %></td>
+      	<td class="library_item column_2">  <%= doc.url %></td>
+      	<td class="library_item column_3">  <%= doc.word_count %></td>
+      </tr>
       <% end %>
  </table>
 

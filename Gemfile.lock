@@ -75,7 +75,6 @@ GEM
     mime-types (1.19)
     multi_json (1.5.0)
     nokogiri (1.5.5)
-    pg (0.14.1)
     polyglot (0.3.3)
     quiet_assets (1.0.1)
       railties (~> 3.1)
@@ -163,7 +162,6 @@ DEPENDENCIES
   eventmachine
   jquery-rails
   nokogiri
-  pg
   quiet_assets
   rails (= 3.2.9)
   ridic
