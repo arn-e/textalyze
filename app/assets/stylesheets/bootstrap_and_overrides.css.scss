@@ -1,14 +1,16 @@
 @import "bootstrap";
 
 body { 	padding-top: 60px;
-				background-color: #9999ff
+				background-color: #0E4068
 			}
 
 @import "bootstrap-responsive";
 
-.navbar .brand{ margin-left: 20px }
+.navbar .brand{ margin-left: 20px;
+								font-weight: 200;
+								color: #2361A3}
 
-.navbar-inner {	background-color: #CAD2E6;
+.navbar-inner {	background-color: #96CCF1;
   							background-image: none
 							}
 
@@ -36,6 +38,10 @@ h2{ font-size: 20px }
 
 .white{ background-color: white}
 
-.table{ background-color: #CAD2E6 }
+.table{ background-color: #A1CBE7 }
 
-.table tbody tr:hover td, .table tbody tr:hover th { background-color: #E7EDFF }
+.column1{ width: 30%}
+
+.column2{ width: 70%}
+
+.table tbody tr:hover td, .table tbody tr:hover th { background-color: #E1F0FB }

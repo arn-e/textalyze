@@ -1,11 +1,11 @@
 <table class="table table-striped table-bordered">
     <thead>
       <tr>
-        <th>Word</th>
-        <th>Frequency</th>
+        <th class="column1">Word</th>
+        <th class="column2">Frequency</th>
       </tr>
     </thead>
       <% JSON.parse(document.word_frequency)["word_frequency"].each do |elem| %>
-        <tr><td class="frequency_item"><%= elem[0].capitalize %></td><td class="frequency_item">  <%= elem[1] %></td></tr>
+        <tr><td class="frequency_item column1"><%= elem[0].capitalize %></td><td class="frequency_item column2">  <%= elem[1] %></td></tr>
       <% end %>
  </table>
