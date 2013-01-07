@@ -1,5 +1,9 @@
 Textalyze::Application.routes.draw do
-  resources :documents
+  # resources :documents
+  
+  get 'documents/new' => 'documents#new'
+  get 'documents/index' => 'documents#index'
+  post 'documents' => 'documents#create'
   root :to => 'documents#new'
 
   # The priority is based upon order of creation:

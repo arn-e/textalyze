@@ -5,8 +5,8 @@
         <th class="column2">Size</th>
       </tr>
     </thead>
-      <% JSON.parse(document.rid_analysis)["rid_analysis"].each do |elem| %>
-        <tr><td class="rid_item column1"><%= elem[0].capitalize %></td><td class="rid_item column2">  <%= elem[1] %></td></tr>
+      <% docs.each do |doc| %>
+      <tr><td class="library_item column_1"><%= doc.body[0..17] %></td><td class="library_item column2">  <%= doc.word_count %></td></tr>
       <% end %>
  </table>
 
