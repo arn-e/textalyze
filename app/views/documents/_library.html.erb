@@ -1,12 +1,12 @@
 <table class="table table-striped table-bordered">
     <thead>
       <tr>
-        <th class="column1">Search ID</th>
+        <th class="column1">Text</th>
         <th class="column2">Size</th>
       </tr>
     </thead>
       <% docs.each do |doc| %>
-      <tr><td class="library_item column_1"><%= doc.body[0..17] %></td><td class="library_item column2">  <%= doc.word_count %></td></tr>
+      <tr><td class="library_item column_1"><%= link_to doc.body[0..17], "/documents/#{doc.id}" %></td><td class="library_item column2">  <%= doc.word_count %></td></tr>
       <% end %>
  </table>
 

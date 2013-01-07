@@ -3,6 +3,8 @@ Textalyze::Application.routes.draw do
   
   get 'documents/new' => 'documents#new'
   get 'documents/index' => 'documents#index'
+  get 'documents/:id' => 'documents#show'
+
   post 'documents' => 'documents#create'
   root :to => 'documents#new'
 
