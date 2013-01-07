@@ -1,21 +1,15 @@
 ## TextAlyze.com
-## Text Analysis On The Fly
+## Simple & Quick Text Analysis
 
 ### Usage :
 
 * User submits text document via URL or pasting contents directly
 * Analysis performed on a number of dimensions :
-  * Word Relevance Score (TF-IDF)
-  * N-Grams (2-grams) - TBD
-  * Sentiment (Regressive Imagery Dictionary)
-  * Optional : Trained Sentiment Analysis via Saplo
+  * Word Frequency (Adjusted)
+  * Categorization via Regressive Imagery Dictionary
 
-### To Do (Issues):
+### TBD :
 
-1. Limit result set shown for word frequency 
+* Saplo integration
+* N-Grams
 
-### To Do (Overview):
-
-1. Add unit tests for document & document upload
-2. Add Integration coverage
-3. Incorporate Backbone
