@@ -9,7 +9,11 @@
       <% docs.each do |doc| %>
       <tr>
       	<td class="library_item column_1">  <%= link_to doc.body[0..17], "/documents/#{doc.id}" %></td>
-      	<td class="library_item column_2">  <%= doc.url %></td>
+      	<% if doc.url != nil %>
+      		<td class="library_item column_2">  <%= link_to doc.url, doc.url %></td>
+      	<% else %>
+      		<td class="library_item column_2">  <%= doc.url %></td>
+      	<% end %>
       	<td class="library_item column_3">  <%= doc.word_count %></td>
       </tr>
       <% end %>
