@@ -1,7 +1,7 @@
 <div id="direct_input">
   <h1> Textalyze </h1>
 </br>
-  <%= form_tag('documents', :method => "post", :remote => true) do %>
+  <%= form_tag('/documents', :method => "post", :remote => true) do %>
     <%= text_field_tag "text_body" %> <br/>
     <%= submit_tag "Textalyze This", :class => 'textalyze btn' %> 
   <% end %>
