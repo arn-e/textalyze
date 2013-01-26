@@ -5,6 +5,7 @@ Textalyze::Application.routes.draw do
   get 'documents/index' => 'documents#index'
   get 'documents/:id' => 'documents#show'
 
+  # post 'api/new' => 
   post 'documents' => 'documents#create'
   root :to => 'documents#new'
 

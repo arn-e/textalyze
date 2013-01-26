@@ -1,7 +1,7 @@
 require 'simplecov'
 SimpleCov.start
 
-require 'rubygems' #is this necessary?
+require 'rubygems'
 # require 'capybara/rspec'
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
