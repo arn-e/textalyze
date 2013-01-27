@@ -5,7 +5,10 @@ Textalyze::Application.routes.draw do
   get 'documents/index' => 'documents#index'
   get 'documents/:id' => 'documents#show'
 
-  # post 'api/new' => 
+  get 'api/:id' => 'api#show' #, :constraints => {:subdomain => "api"}
+  post 'api' => 'api#create' #, :constraints => {:subdomain => "api"}
+
+  # post 'documents/search' => 'api#create' 
   post 'documents' => 'documents#create'
   root :to => 'documents#new'
 
