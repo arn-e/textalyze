@@ -1,22 +1,22 @@
 @import "bootstrap";
 
 body { 	padding-top: 60px;
-				background-color: #0E4068
+				background-color: #0B5FA5
 			}
 
 @import "bootstrap-responsive";
 
 .navbar .brand{ margin-left: 20px;
 								font-weight: 200;
-								text-shadow: 0 1px 0 #9966CC;
-								color: #0E4068
+								text-shadow: 0 1px 0 #043C6B;
+								color: white
 								}
 
 .navbar .nav .nav_item { margin-top : 1px;
-												text-shadow: 0 1px 0 #9966CC;
-												color : #0E4068 }
+												text-shadow: 0 1px 0 #043C6B;
+												color : white }
 
-.navbar-inner {	background-color: #96CCF1;
+.navbar-inner {	background-color: #25547B;
   							background-image: none
 							}
 
@@ -43,7 +43,7 @@ h2{ font-size: 20px }
 
 .white{ background-color: white}
 
-.table{ background-color: #A1CBE7 }
+.table{ background-color: #09284B }
 
 .column1{ width: 30%}
 
