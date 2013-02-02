@@ -41,14 +41,14 @@ body { 	padding-top: 60px;
 
 h2{ font-size: 20px }
 
-.white{ background-color: black}
+.white{ background-color: #060739}
 
-.table{ background-color: black }
+.table{ background-color: #060739 }
 
-.table-striped tbody > tr:nth-child(odd) > td, .table-striped tbody > tr:nth-child(odd) > th {background-color:black}
+.table-striped tbody > tr:nth-child(odd) > td, .table-striped tbody > tr:nth-child(odd) > th {background-color: #121358}
 
 .column1{ width: 30%}
 
 .column2{ width: 70%}
 
-.table tbody tr:hover td, .table tbody tr:hover th { background-color: #E1F0FB }
+.table tbody tr:hover td, .table tbody tr:hover th { background-color: #4547AB }
