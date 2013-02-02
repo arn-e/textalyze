@@ -41,9 +41,11 @@ body { 	padding-top: 60px;
 
 h2{ font-size: 20px }
 
-.white{ background-color: white}
+.white{ background-color: black}
 
-.table{ background-color: #09284B }
+.table{ background-color: black }
+
+.table-striped tbody > tr:nth-child(odd) > td, .table-striped tbody > tr:nth-child(odd) > th {background-color:black}
 
 .column1{ width: 30%}
 
