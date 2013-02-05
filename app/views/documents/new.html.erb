@@ -1,8 +1,8 @@
 <div id="direct_input">
-  <h1> Textalyze </h1>
-  <h6> Beta </h6>
+  <h1 class="title_text"> Textalyze </h1>
+  <h6 class="title_text"> Beta </h6>
 </br>
-<h5> Enter Text or URL</h5>
+<h5 class="title_text"> Enter Text or URL</h5>
   <%= form_tag('/documents', :method => "post", :remote => true) do %>
     <%= text_field_tag "text_body" %> <br/>
     <%= submit_tag "Textalyze This", :class => 'textalyze btn btn-primary' %> 
