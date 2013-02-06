@@ -9,7 +9,7 @@ gem 'thin'
 gem "bootstrap-sass", ">= 2.1.1.0"
 gem 'simplecov'
 gem 'nokogiri'
-gem 'sqlite3'
+gem 'pg'
 gem 'tf_idf'
 gem 'ridic'
 gem 'eventmachine'
