@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 body { 	padding-top: 60px;
-				background-color: #0B5FA5
+				background-color: #FFB073
 			}
 
 @import "bootstrap-responsive";
@@ -16,7 +16,7 @@ body { 	padding-top: 60px;
 												text-shadow: 0 1px 0 #043C6B;
 												color : white }
 
-.navbar-inner {	background-color: #25547B;
+.navbar-inner {	background-color: #FF6F00;
   							background-image: none
 							}
 
@@ -41,14 +41,26 @@ body { 	padding-top: 60px;
 
 h2{ font-size: 20px }
 
-.white{ background-color: #060739}
+.white{ background-color: #009D91}
 
-.table{ background-color: #060739 }
+.table{ background-color: #1D766F }
 
-.table-striped tbody > tr:nth-child(odd) > td, .table-striped tbody > tr:nth-child(odd) > th {background-color: #121358}
+.table-striped tbody > tr:nth-child(odd) > td, .table-striped tbody > tr:nth-child(odd) > th {background-color: #009D91}
 
 .column1{ width: 30%}
 
 .column2{ width: 70%}
 
-.table tbody tr:hover td, .table tbody tr:hover th { background-color: #4547AB }
+.table tbody tr:hover td, .table tbody tr:hover th { background-color: #33CEC3 }
+
+a:link {
+	color: white;
+}
+
+a:active {
+	color:white;
+}
+
+a {
+	color: white;
+}
