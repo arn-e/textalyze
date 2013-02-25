@@ -43,7 +43,11 @@ h2{ font-size: 20px }
 
 .white{ background-color: #009D91}
 
-.table{ background-color: #1D766F }
+.table{ 
+	background-color: #1D766F;
+	width: 85%;
+	margin: 0 auto;
+	}
 
 .table-striped tbody > tr:nth-child(odd) > td, .table-striped tbody > tr:nth-child(odd) > th {background-color: #009D91}
 

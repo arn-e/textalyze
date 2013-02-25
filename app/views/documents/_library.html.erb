@@ -10,7 +10,7 @@
       <tr>
       	<td class="library_item column_1">  <%= link_to doc.body[0..17], "/documents/#{doc.id}" %></td>
       	<% if doc.url != nil %>
-      		<td class="library_item column_2">  <%= link_to doc.url, doc.url %></td>
+      		<td class="library_item column_2">  <%= link_to doc.url[0..37], doc.url %></td>
       	<% else %>
       		<td class="library_item column_2">  <%= doc.url %></td>
       	<% end %>
